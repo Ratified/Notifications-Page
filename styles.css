@@ -58,8 +58,8 @@ p{
 
 .red{
     display: inline-block;
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
     background-color: var(--red);
     border-radius: 50%;
 }
@@ -97,7 +97,7 @@ fieldset:hover{
     .notifications{
         margin-inline: auto;
         margin-top: 5rem;
-
+    
         border-radius: 1rem;
     }  
 
