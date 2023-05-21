@@ -1,0 +1,188 @@
+/* Reset CSS */
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img, video, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+:root{
+    /* Primary Colors */
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+
+    /* Font */
+    --ff-main: "Plus Jakarta Sans", sans-serif;
+    --ff-main-weight: 800;
+    --ff-minor-weight: 300;
+
+    --content-padding: 1rem;
+    --content-gap: 1rem;
+
+    --border-radius: 0.5rem;
+}
+
+body{
+    font-family: var(--ff-main);
+    background-color: var(--Light-grayish-blue-2);
+    font-size: 1rem;
+}
+
+p{
+    font-weight: var(--ff-minor-weight);
+    /* opacity: 0.6; */
+}
+
+.red{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--red);
+    border-radius: 50%;
+}
+
+.bold{
+    font-weight: var(--ff-main-weight);
+}
+
+.info{
+    font-weight: 550;
+}
+
+fieldset{
+    padding: var(--content-padding);
+}
+
+fieldset:hover{
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.notifications{
+    background-color: var(--white);
+    max-width: 800px;
+    padding: var(--content-padding);
+
+    display: grid;
+}
+
+@media(min-width: 604px){
+
+    :root{
+        --content-padding: 2rem;
+    }
+
+    .notifications{
+        margin-inline: auto;
+        margin-top: 5rem;
+
+        border-radius: 1rem;
+    }  
+
+}
+
+/* unread */
+.unread{
+    background-color: var(--Light-grayish-blue-1);
+}
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.heading{
+    font-family: var(--ff-main);
+    font-weight: var(--ff-main-weight);
+    font-size: 1rem;
+}
+
+@media(min-width: 604px){
+    .heading{
+        font-size: 2rem;
+    }
+}
+
+.alert{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 5px;
+}
+
+main{
+    display: grid;
+    gap: var(--content-gap);
+    cursor: pointer;
+}
+
+
+.profile{
+    display: flex;
+    gap: var(--content-gap);
+    padding: var(--content-padding);
+    /* background-color: var(--Light-grayish-blue-1); */
+}
+
+.profile > img{
+    width: 40px;
+    height: 40px;
+}
+
+.profile > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+small{
+    opacity: 0.6;
+}
+
+.kimerly-info{
+    display: flex;
+    
+}
+
+.kimerly-info > img{
+    width: 30px;
+    height: 30px;
+}
+
+@media(min-width: 604px){
+    body{
+        font-size: 1.5rem;
+    }
+}
